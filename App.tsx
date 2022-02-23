@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { TeamProvider } from './app/context/TeamContext';
+import TabNavigation from './app/navigators/TabNavigator';
+import * as Font from 'expo-font';
+import AppLoading from 'expo-app-loading';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    // const [loaded, setLoaded] = useState<boolean>(false);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    // const fetchFonts = () => {
+    //     return Font.loadAsync({
+    //         'Pokemon Hollow': require('./assets/fonts/Pokemon Hollow.ttf'),
+    //     });
+    // };
+    // if (!loaded) {
+    //     return (
+    //         <AppLoading
+    //             startAsync={fetchFonts}
+    //             onFinish={() => setLoaded(true)}
+    //             onError={console.warn}
+    //         />
+    //     );
+    // }
+    // if (loaded) {
+    return (
+        <TeamProvider>
+            <NavigationContainer>
+                <TabNavigation />
+            </NavigationContainer>
+        </TeamProvider>
+    );
+}
+// }
