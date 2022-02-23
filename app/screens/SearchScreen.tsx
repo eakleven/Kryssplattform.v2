@@ -19,6 +19,7 @@ import ListItem from '../components/List/ListItem';
 import { ListItemSeperator } from '../components/List/ListItemSeperator';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootTabParamList } from '../navigators/TabNavigator';
+import ErrorView from '../components/ErrorView';
 
 const SearchScreen = ({
     route,
@@ -70,11 +71,9 @@ const SearchScreen = ({
                 placeholder='Search'
                 onChange={(e) => handleChange(e)}
             />
-            {error && (
-                <SafeAreaView>
-                    <Text>Error happened</Text>
-                </SafeAreaView>
-            )}
+
+            {error && <ErrorView />}
+
             {!!list && (
                 <FlatList
                     data={search}

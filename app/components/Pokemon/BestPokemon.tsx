@@ -20,8 +20,7 @@ const BestPokemon: FC<IBestPokemon> = ({ pokemon }) => {
         <View style={styles.container}>
             <View style={styles.upperContainer}>
                 <Text style={[styles.text, { textAlign: 'center' }]}>
-                    {pokemon.name.charAt(0).toUpperCase() +
-                        pokemon.name.slice(1)}
+                    {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
                 </Text>
 
                 <Image

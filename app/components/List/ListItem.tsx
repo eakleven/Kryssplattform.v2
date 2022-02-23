@@ -29,7 +29,7 @@ const ListItem: FC<IListItem> = ({
         <TouchableHighlight onPress={() => onPress(title)}>
             <View style={styles.container}>
                 <Text style={styles.text}>
-                    {title.charAt(0).toUpperCase() + title.slice(1)}
+                    {title[0].toUpperCase() + title.slice(1)}
                 </Text>
                 {deleteFromFavourite && (
                     <Button

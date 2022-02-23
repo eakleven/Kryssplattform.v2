@@ -28,7 +28,7 @@ const RegionStack = () => {
                 component={PokemonDetailsScreen}
                 options={({ route }) => ({
                     title: `Details about ${
-                        route.params.name.charAt(0).toUpperCase() +
+                        route.params.name[0].toUpperCase() +
                         route.params.name.slice(1)
                     }`,
                 })}
@@ -47,7 +47,7 @@ const SearchStack = () => {
                 component={PokemonDetailsScreen}
                 options={({ route }) => ({
                     title: `Details about ${
-                        route.params.name.charAt(0).toUpperCase() +
+                        route.params.name[0].toUpperCase() +
                         route.params.name.slice(1)
                     }`,
                 })}

@@ -16,6 +16,7 @@ import PokemonApi from '../api/PokemonApi';
 import PokemonItem from '../components/Pokemon/PokemonItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TeamContext, TeamContextType } from '../context/TeamContext';
+import ErrorView from '../components/ErrorView';
 
 const PokemonDetailsScreen = ({
     route,
@@ -43,11 +44,7 @@ const PokemonDetailsScreen = ({
     return (
         <View>
             <ActivityIndicator animating={loading} size='large' />
-            {error && (
-                <>
-                    <Text>An Error has occured.</Text>
-                </>
-            )}
+            {error && <ErrorView />}
             {!error && !loading && pokemon && (
                 <>
                     <PokemonItem pokemon={pokemon} />

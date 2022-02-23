@@ -20,6 +20,7 @@ import {
     NavigationRouteContext,
     useNavigation,
 } from '@react-navigation/native';
+import ErrorView from '../components/ErrorView';
 
 const ListPokemonsScreen = ({
     route,
@@ -52,6 +53,7 @@ const ListPokemonsScreen = ({
         <SafeAreaView>
             <View>
                 <ActivityIndicator animating={loading} size='large' />
+                {error && <ErrorView />}
                 {!!pokemons && (
                     <FlatList
                         data={pokemons}
