@@ -46,12 +46,14 @@ const RegionsScreen = ({
 export default RegionsScreen;
 
 const styles = StyleSheet.create({
-    container: { flex: 1, justifyContent: 'center' },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+    },
     text: {
         textAlign: 'center',
         fontSize: 25,
         textAlignVertical: 'center',
         color: 'black',
-        // fontFamily: 'Pokemon Hollow',
     },
 });

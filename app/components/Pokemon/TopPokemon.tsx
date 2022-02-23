@@ -3,11 +3,11 @@ import React, { FC, useEffect, useState } from 'react';
 import { IPokemon } from '../../interface/PokemonInterface';
 import PokemonApi from '../../api/PokemonApi';
 
-interface ITeamStats {
+interface ITopPokemon {
     team: IPokemon[];
 }
 
-const TeamStats: FC<ITeamStats> = ({ team }) => {
+const TopPokemon: FC<ITopPokemon> = ({ team }) => {
     const width = Dimensions.get('window').width / 2;
 
     const [topPokemon, setTopPokemon] = useState<IPokemon>();
@@ -62,7 +62,7 @@ const TeamStats: FC<ITeamStats> = ({ team }) => {
     );
 };
 
-export default TeamStats;
+export default TopPokemon;
 
 const styles = StyleSheet.create({
     container: { flex: 1, justifyContent: 'center', flexDirection: 'column' },

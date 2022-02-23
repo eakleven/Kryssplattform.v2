@@ -15,11 +15,7 @@ import { IPokemon, IPokemonList } from '../interface/PokemonInterface';
 import PokemonApi from '../api/PokemonApi';
 import ListItem from '../components/List/ListItem';
 import { ListItemSeperator } from '../components/List/ListItemSeperator';
-import {
-    NavigationProp,
-    NavigationRouteContext,
-    useNavigation,
-} from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import ErrorView from '../components/ErrorView';
 
 const ListPokemonsScreen = ({

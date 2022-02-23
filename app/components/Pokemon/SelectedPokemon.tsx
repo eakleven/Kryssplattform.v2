@@ -9,11 +9,11 @@ import {
 import React, { FC } from 'react';
 import { IPokemon } from '../../interface/PokemonInterface';
 
-interface IBestPokemon {
+interface ISelectedPokemon {
     pokemon: IPokemon;
 }
 
-const BestPokemon: FC<IBestPokemon> = ({ pokemon }) => {
+const SelectedPokemon: FC<ISelectedPokemon> = ({ pokemon }) => {
     const width = Dimensions.get('window').width / 2;
 
     return (
@@ -45,7 +45,7 @@ const BestPokemon: FC<IBestPokemon> = ({ pokemon }) => {
     );
 };
 
-export default BestPokemon;
+export default SelectedPokemon;
 
 const styles = StyleSheet.create({
     container: {

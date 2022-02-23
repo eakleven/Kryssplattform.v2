@@ -22,7 +22,11 @@ const TabNavigation = () => {
                 component={HomeScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <FontAwesome5 name='list' size={size} color={color} />
+                        <FontAwesome5
+                            name='house-user'
+                            size={size}
+                            color={color}
+                        />
                     ),
                 }}
             />
@@ -45,7 +49,7 @@ const TabNavigation = () => {
                 options={{
                     tabBarIcon: ({ color, size, focused }) => (
                         <FontAwesome5
-                            name={focused ? 'frown' : 'search'}
+                            name={focused ? 'circle' : 'search'}
                             size={size}
                             color={color}
                         />
@@ -56,12 +60,8 @@ const TabNavigation = () => {
                 name='RegionsList'
                 component={RegionStack}
                 options={{
-                    tabBarIcon: ({ color, size, focused }) => (
-                        <FontAwesome5
-                            name={focused ? 'frown' : 'search'}
-                            size={size}
-                            color={color}
-                        />
+                    tabBarIcon: ({ color, size }) => (
+                        <FontAwesome5 name={'list'} size={size} color={color} />
                     ),
                 }}
             />

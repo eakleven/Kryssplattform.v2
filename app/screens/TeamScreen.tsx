@@ -1,12 +1,12 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React, { useContext, useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { TeamContext, TeamContextType } from '../context/TeamContext';
 import ListItem from '../components/List/ListItem';
 import { ListItemSeperator } from '../components/List/ListItemSeperator';
-import BestPokemon from '../components/Pokemon/BestPokemon';
 import { IPokemon } from '../interface/PokemonInterface';
-import TeamStats from '../components/Pokemon/TeamStats';
+import TeamStats from '../components/Pokemon/TopPokemon';
+import SelectedPokemon from '../components/Pokemon/SelectedPokemon';
+import TopPokemon from '../components/Pokemon/TopPokemon';
 
 const TeamScreen = () => {
     const { team, deleteFromTeam } = useContext(TeamContext) as TeamContextType;
@@ -23,10 +23,12 @@ const TeamScreen = () => {
         <View style={styles.container}>
             <View style={styles.topContainer}>
                 <View style={styles.bestPokemon}>
-                    {activePokemon && <BestPokemon pokemon={activePokemon} />}
+                    {activePokemon && (
+                        <SelectedPokemon pokemon={activePokemon} />
+                    )}
                 </View>
                 <View style={styles.teamStats}>
-                    <TeamStats team={team} />
+                    <TopPokemon team={team} />
                 </View>
             </View>
             <View style={styles.teamList}>
